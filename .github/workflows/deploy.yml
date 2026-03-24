@@ -1,0 +1,34 @@
+name: Deploy Blog
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+          cache: 'npm'
+
+      - name: Install & Build
+        run: |
+          npm install
+          npx hexo generate
+
+      - name: Deploy to Server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 117.72.149.211
+          username: root
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          source: "public/"
+          target: "/var/www/hexo/public"
+          strip_components: 1
+          rm: true
