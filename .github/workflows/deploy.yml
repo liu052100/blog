@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup SSH key
+        run: |
+          echo "${{ secrets.SERVER_SSH_KEY }}" | base64 -d > /tmp/deploy_key
+          chmod 600 /tmp/deploy_key
+
       - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: 117.72.149.211
-          username: root
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            cd /var/www/hexo
-            git pull origin master
-            npm install --prefer-offline
-            npx hexo generate
+        run: |
+          ssh -i /tmp/deploy_key \
+            -o StrictHostKeyChecking=no \
+            root@117.72.149.211 \
+            'cd /var/www/hexo && git pull origin master && npm install --prefer-offline && npx hexo generate'
