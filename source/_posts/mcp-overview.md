@@ -64,6 +64,8 @@ categories: 工具
 
 ## CCG 多模型协作工作流
 
+> GitHub 仓库：[fengshao1227/ccg-workflow](https://github.com/fengshao1227/ccg-workflow)
+> 
 > `npx ccg-workflow` 安装，Claude 作编排，Codex 负责后端，Gemini 负责前端，外部模型只返回 patch，Claude 审核后应用。
 
 ### 开发工作流
