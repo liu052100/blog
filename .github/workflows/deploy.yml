@@ -19,5 +19,5 @@ jobs:
         run: |
           ssh -i ~/.ssh/deploy_key \
             -o StrictHostKeyChecking=no \
-            root@117.72.149.211 \
+            ubuntu@43.139.32.161 \
             'cd /var/www/hexo && git pull origin master && npm install --prefer-offline && npx hexo generate'

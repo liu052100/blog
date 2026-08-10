@@ -6,7 +6,7 @@ author: 1e9+7
 language: zh-CN
 timezone: Asia/Shanghai
 
-url: http://117.72.149.211
+url: https://1e9.uno
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

@@ -17,7 +17,6 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  stats: https://stats.1e9.uno/share/iCAvQkD4VOtuVRNZ
 
 
 
@@ -181,7 +180,7 @@ cloudflare_analytics:
 
 # Fill in your Umami Analytics tracking ID to enable Umami Analytics.
 umami_analytics:
-  enabled: true
+  enabled: false
   id: 4ad89fa1-8abb-4a17-822a-cd06b77c10f1
   host: https://stats.1e9.uno
   script_name: ua
