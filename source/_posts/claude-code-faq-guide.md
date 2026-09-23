@@ -39,15 +39,15 @@ $env:HTTPS_PROXY="http://127.0.0.1:Port"
 
 从 [Microsoft Store](https://apps.microsoft.com/detail/9N0DX20HK701) 安装 Windows Terminal，安装后设定默认打开系统内置 PowerShell 并给予默认管理员权限。
 
-![Windows Terminal 设置](http://117.72.149.211:8080/f/RDuE/356c57d7.jpeg)
+![Windows Terminal 设置](/images/claude-code-faq/faq-01.jpeg)
 
 设定默认为管理员权限：
 
-![管理员权限设定](http://117.72.149.211:8080/f/45i8/4d8c6c83.jpeg)
+![管理员权限设定](/images/claude-code-faq/faq-02.jpeg)
 
 后续即可右键在所处文件夹内直接打开终端：
 
-![右键打开终端](http://117.72.149.211:8080/f/XRTa/dab8a1e8.png)
+![右键打开终端](/images/claude-code-faq/faq-03.png)
 
 ### 2. WinGet
 
@@ -59,7 +59,7 @@ Write-Host "Using Repair-WinGetPackageManager cmdlet to bootstrap WinGet..."
 Repair-WinGetPackageManager -AllUsers
 ```
 
-![WinGet 安装](http://117.72.149.211:8080/f/D3hB/08a02dca.jpeg)
+![WinGet 安装](/images/claude-code-faq/faq-04.jpeg)
 
 ### 3. PowerShell 7
 
@@ -67,15 +67,15 @@ Repair-WinGetPackageManager -AllUsers
 winget install Microsoft.PowerShell
 ```
 
-![PowerShell 7 安装](http://117.72.149.211:8080/f/B8Ix/d5e15586.jpeg)
+![PowerShell 7 安装](/images/claude-code-faq/faq-05.jpeg)
 
 安装后切换默认终端为 PowerShell 7：
 
-![切换默认终端](http://117.72.149.211:8080/f/q8S2/2305bc47.jpeg)
+![切换默认终端](/images/claude-code-faq/faq-06.jpeg)
 
 同样修改其默认配置为管理员启动：
 
-![管理员启动](http://117.72.149.211:8080/f/0bcM/feeada41.png)
+![管理员启动](/images/claude-code-faq/faq-07.png)
 
 全部关闭后打开新终端窗口继续安装。
 
@@ -85,11 +85,11 @@ winget install Microsoft.PowerShell
 winget install zufuliu.notepad4
 ```
 
-![Notepad 4 安装](http://117.72.149.211:8080/f/kzUx/3bf60dbf.jpeg)
+![Notepad 4 安装](/images/claude-code-faq/faq-08.jpeg)
 
 安装后可通过"系统集成设置"替换系统记事本和快捷打开方式：
 
-![Notepad 4 系统集成](http://117.72.149.211:8080/f/d5sv/e457b512.jpeg)
+![Notepad 4 系统集成](/images/claude-code-faq/faq-09.jpeg)
 
 ### 5. Git for Windows
 
@@ -97,7 +97,7 @@ winget install zufuliu.notepad4
 winget install --id Git.Git -e --source winget
 ```
 
-![Git 安装](http://117.72.149.211:8080/f/8aCA/e8ec97ef.jpeg)
+![Git 安装](/images/claude-code-faq/faq-10.jpeg)
 
 ### 6. fnm（Node 版本管理）
 
@@ -105,7 +105,7 @@ winget install --id Git.Git -e --source winget
 winget install Schniz.fnm
 ```
 
-![fnm 安装](http://117.72.149.211:8080/f/pMHg/695043e3.jpeg)
+![fnm 安装](/images/claude-code-faq/faq-11.jpeg)
 
 安装成功后关闭全部窗口，重新打开终端，继续安装 Node：
 
@@ -114,7 +114,7 @@ fnm install lts/krypton
 fnm use lts/krypton
 ```
 
-![Node 安装](http://117.72.149.211:8080/f/2AtR/119f7092.jpeg)
+![Node 安装](/images/claude-code-faq/faq-12.jpeg)
 
 #### 配置 fnm 环境
 
@@ -124,7 +124,7 @@ notepad $profile
 
 如果提示文件不存在：
 
-![Profile 不存在提示](http://117.72.149.211:8080/f/Z1fd/0ea85fa1.png)
+![Profile 不存在提示](/images/claude-code-faq/faq-13.png)
 
 先新建：
 
@@ -134,7 +134,7 @@ New-Item -Path $Profile -Type File -Force
 
 再次打开 Profile 文件：
 
-![Profile 文件打开](http://117.72.149.211:8080/f/mWFZ/46881a6f.jpeg)
+![Profile 文件打开](/images/claude-code-faq/faq-14.jpeg)
 
 在 Profile 中添加以下内容后保存：
 
@@ -142,7 +142,7 @@ New-Item -Path $Profile -Type File -Force
 fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
 ```
 
-![fnm env 配置](http://117.72.149.211:8080/f/7Yuq/3d19c7f4.jpeg)
+![fnm env 配置](/images/claude-code-faq/faq-15.jpeg)
 
 关闭全部窗口，重新打开终端后：
 
@@ -152,7 +152,7 @@ npm config set registry https://registry.npmmirror.com
 npm install -g @anthropic-ai/claude-code
 ```
 
-![Claude Code 安装完成](http://117.72.149.211:8080/f/oki8/ffe68624.jpeg)
+![Claude Code 安装完成](/images/claude-code-faq/faq-16.jpeg)
 
 ### 美化相关（可选）
 
@@ -160,7 +160,7 @@ npm install -g @anthropic-ai/claude-code
 
 推荐 [Maple Mono](https://github.com/subframe7536/maple-font)（支持中文的等宽字体），下载 `MapleMonoNormal-NF-CN.zip` 安装后，在 PowerShell 外观设置中选择 `Maple Mono Normal NF CN`：
 
-![字体设置](http://117.72.149.211:8080/f/WKTk/cff591ab.png)
+![字体设置](/images/claude-code-faq/faq-17.png)
 
 #### Oh My Posh
 
@@ -174,13 +174,13 @@ winget install JanDeDobbeleer.OhMyPosh --source winget --scope user --force
 oh-my-posh init pwsh --eval | Invoke-Expression
 ```
 
-![Oh My Posh Profile 配置](http://117.72.149.211:8080/f/MEho/49a6dd53.jpeg)
+![Oh My Posh Profile 配置](/images/claude-code-faq/faq-18.jpeg)
 
-![Oh My Posh init](http://117.72.149.211:8080/f/NVIX/734bf6a4.jpeg)
+![Oh My Posh init](/images/claude-code-faq/faq-19.jpeg)
 
 效果预览：
 
-![Oh My Posh 效果](http://117.72.149.211:8080/f/9qSX/e10715ae.png)
+![Oh My Posh 效果](/images/claude-code-faq/faq-20.png)
 
 主题样式参考：[Oh My Posh Themes](https://ohmyposh.dev/docs/themes)
 
@@ -192,7 +192,7 @@ oh-my-posh init pwsh --eval | Invoke-Expression
 
 **A**：仅在 Node v24.2.0 / v22.17.0 以上版本，`Shift+Tab` 才能正确工作。在不支持的 Node 版本上会自动回退绑定到 `Alt+M`。v2.0.31 使用 bun 构建后全端统一为 `Shift+Tab`。
 
-![Plan Mode 版本说明](http://117.72.149.211:8080/f/5Dcp/69909444.png)
+![Plan Mode 版本说明](/images/claude-code-faq/faq-21.png)
 
 > 参考：[Windows 下 claude code 如何切换到 plan 模式？](https://linux.do/t/topic/794815/4) —— Haleclipse
 
@@ -213,7 +213,7 @@ oh-my-posh init pwsh --eval | Invoke-Expression
 
 **A**：暂时卸载 VSCode 的 VSIX 扩展程序，并关闭 IDE Auto Connect 功能。该扩展在编辑时将目标文件路径传递给 VSCode 进行协同，目前路径转换存在问题。
 
-![fs_right 错误](http://117.72.149.211:8080/f/eXUO/a1632cef.png)
+![fs_right 错误](/images/claude-code-faq/faq-22.png)
 
 - v1.0.65 已修正链接 IDE 稳定性问题
 
@@ -269,7 +269,7 @@ claude mcp add --transport sse context7 https://mcp.context7.com/sse
 
 同中转站配置，Key 处可按提供者要求处理（可置空）。
 
-![settings.json 配置示意](http://117.72.149.211:8080/f/JbsW/140f804a.png)
+![settings.json 配置示意](/images/claude-code-faq/faq-23.png)
 
 **重要提示**：
 
@@ -277,11 +277,11 @@ claude mcp add --transport sse context7 https://mcp.context7.com/sse
 - `ANTHROPIC_API_KEY` 的优先级高于官网登录态，只要存在该 `env`，CC 将不会使用官网登录态
 - v1.0.61 已添加 `--settings` 参数，可指定加载不同的 `settings.json` 配置文件
 
-![--settings 参数](http://117.72.149.211:8080/f/z0Hb/b3999658.png)
+![--settings 参数](/images/claude-code-faq/faq-24.png)
 
 - 在设置中开启 `Verbose Output` 可恢复详情输出并显示上下文窗口实际值
 
-![Verbose Output 效果](http://117.72.149.211:8080/f/vrCX/7026491d.png)
+![Verbose Output 效果](/images/claude-code-faq/faq-25.png)
 
 ---
 
