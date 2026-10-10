@@ -10,6 +10,8 @@ categories:
   - 工具
 ---
 
+> **2026-10-10 更新**：我已经不用这个项目了，现在改用 DBX 的 MCP，见《[从 mysql_mcp_server 换到 DBX：让 AI 直接用数据库客户端里现成的连接](/2026/10/10/dbx-mcp-guide/)》。本文保留作参考，内容停留在 2026 年 4 月。
+
 > **项目地址**：[designcomputer/mysql_mcp_server](https://github.com/designcomputer/mysql_mcp_server) | **作者**：Dana K. Williams | **版本**：0.2.2 | **协议**：MIT
 
 MCP（Model Context Protocol）是 Anthropic 推出的一套标准协议，让 AI 助手能够通过结构化接口与外部工具交互。`mysql_mcp_server` 是一个基于 MCP 的 MySQL 连接器，装上之后，Claude Desktop、VSCode Copilot、Claude Code 等 AI 工具就能直接查询和操作你的 MySQL 数据库。
